@@ -1,0 +1,14 @@
+<div id="reviews" data-controller="ajax-form">
+  <p>
+    <strong>Reviews:</strong>
+  </p>
+
+
+  <ul>
+    <% restaurant.reviews.each do |review| %>
+      <li><%= review.content %></li>
+    <% end %>
+  </ul>
+
+  <%= render "reviews/form", restaurant: restaurant, review: review %>
+</div>

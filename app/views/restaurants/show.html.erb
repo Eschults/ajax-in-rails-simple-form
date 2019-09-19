@@ -10,18 +10,8 @@
   <%= @restaurant.address %>
 </p>
 
-<p>
-  <strong>Reviews:</strong>
-</p>
 
-
-<ul>
-  <% @restaurant.reviews.each do |review| %>
-    <li><%= review.content %></li>
-  <% end %>
-</ul>
-
-<%= render "reviews/form" %>
+<%= render "reviews/reviews", restaurant: @restaurant, review: Review.new %>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
