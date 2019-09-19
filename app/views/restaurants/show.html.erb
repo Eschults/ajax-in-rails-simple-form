@@ -10,5 +10,18 @@
   <%= @restaurant.address %>
 </p>
 
+<p>
+  <strong>Reviews:</strong>
+</p>
+
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= render "reviews/form" %>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

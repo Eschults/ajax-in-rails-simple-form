@@ -1,0 +1,4 @@
+<%= simple_form_for [ @restaurant, @review ], remote: true, data: { controller: "ajax-form", action: "ajax:error->ajax-form#renderForm"} do |f| %>
+  <%= f.input :content, label: "Add yours" %>
+  <%= f.submit class: "btn btn-success" %>
+<% end %>
