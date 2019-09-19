@@ -26,7 +26,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to @restaurant, notice: 'Restaurant was successfully created.'
     else
-      render :new
+      render partial: "form", status: :unprocessable_entity
     end
   end
 
